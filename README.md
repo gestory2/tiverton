@@ -1,1 +1,5 @@
-# tiverton
+This case study was harder than I expected, partially because of the contrived nature of the problem, and partially because of the directions to use Snowflake for everything. I am much more familiar with using ETL tools like Informatica/Airflow to bring the data in and then using views and dynamic tables to transform that data. That said, I have only been working with Snowflake for a year and could absolutely strengthen that skillset with research and time. I don't believe this case study fairly assesses my overall engineering knowledge or skills but accept your evaluation regardless and appreciate your time in reviewing.
+
+1. I have not used dbt, but I know that it's a popular templating tool for making SQL more flexible. I would likely use it for the database and schema names to make dev/prod deployment simpler.
+
+2. As for the geospatial data, 500k records is not large. We have tables with billions of rows that perform fine, even on x-small warehouses. That said, if large tables are involved in frequently used business logic, I would use dynamic tables. They preserve the dynamic nature of views without having to create and schedule tasks to handle the updates.
